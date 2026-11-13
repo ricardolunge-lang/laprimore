@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>La Primore Clinic</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Hanken+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FAF7F4;--bg2:#EFE9E4;--ink:#2E2626;--mute:#7D6E6C;--rose:#C9A3A4;--gold:#A88B6A;--deep:#5E4A4B;--line:rgba(43,34,32,.12)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1C1614;--bg2:#251D1A;--ink:#F3E9E2;--mute:#B9A79F;--deep:#120E0D;--line:rgba(243,233,226,.14)}}
+:root[data-theme="dark"]{--bg:#1C1614;--bg2:#251D1A;--ink:#F3E9E2;--mute:#B9A79F;--deep:#120E0D;--line:rgba(243,233,226,.14)}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:300 16px/1.7 Inter,sans-serif;overflow-x:hidden}
+a{color:inherit;text-decoration:none}img{display:block;width:100%;height:100%;object-fit:cover}
+.serif{font-family:"Cormorant Garamond",serif;font-weight:300}
+.wrap{max-width:1240px;margin:0 auto;padding:0 clamp(16px,4vw,48px)}
+.eyebrow{font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);display:flex;gap:12px;align-items:center}
+.eyebrow:before{content:"";width:28px;height:1px;background:var(--gold)}
+h1,h2,h3{font-family:"Cormorant Garamond",serif;font-weight:300;line-height:1.05;letter-spacing:-.01em}
+h2{font-size:clamp(40px,6vw,76px);margin:18px 0 24px}h2 em,h1 em{font-style:italic;color:var(--rose)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 30px;border-radius:999px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;transition:.4s}
+.btn.dark{background:var(--ink);color:var(--bg)}.btn.dark:hover{background:var(--gold)}
+.btn.line{border:1px solid currentColor}.btn.line:hover{background:var(--ink);color:var(--bg)}
+nav{position:fixed;inset:0 0 auto;z-index:50;transition:.4s}nav.s{background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:78px}
+.logo{font-family:"Cormorant Garamond",serif;font-size:26px;letter-spacing:.18em;text-transform:uppercase}.logo i{color:var(--gold);font-style:normal}
+nav ul{display:flex;gap:36px;list-style:none;font-size:12px;letter-spacing:.2em;text-transform:uppercase}nav ul a:hover{color:var(--gold)}
+@media(max-width:860px){nav ul{display:none}}
+.hero{min-height:100svh;display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;padding-top:110px}
+.hero h1{font-size:clamp(54px,8.5vw,128px)}
+.hero p{max-width:440px;color:var(--mute);margin:28px 0 40px}
+.hero .img{aspect-ratio:3/4;border-radius:240px 240px 8px 8px;overflow:hidden;background:linear-gradient(160deg,var(--rose),var(--bg2))}
+.hero .img img{transform:scale(1.08);transition:transform 2.4s cubic-bezier(.2,.7,.2,1)}.in .img img,.hero.in .img img{transform:scale(1)}
+.stats{display:flex;gap:44px;margin-top:56px;padding-top:28px;border-top:1px solid var(--line)}.stats b{display:block;font:300 40px "Cormorant Garamond",serif}.stats span{font-size:12px;color:var(--mute);letter-spacing:.1em}
+@media(max-width:860px){.hero{grid-template-columns:1fr;padding-top:120px}.hero .img{max-height:520px}}
+section{padding:clamp(80px,12vw,160px) 0}
+.intro{text-align:center}.intro h2{max-width:900px;margin:24px auto}.intro .eyebrow{justify-content:center}.intro p{max-width:580px;margin:0 auto;color:var(--mute)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:64px}
+@media(max-width:860px){.grid{grid-template-columns:1fr}}
+.card{background:var(--bg2);border-radius:6px;padding:40px 34px;display:flex;flex-direction:column;gap:16px;min-height:380px;transition:.5s;position:relative;overflow:hidden}
+.card:hover{transform:translateY(-6px);background:var(--deep);color:#F3E9E2}.card:hover p{color:#cdbbb3}
+.card .n{font:italic 300 22px "Cormorant Garamond",serif;color:var(--gold)}.card h3{font-size:40px;margin-top:auto}.card p{color:var(--mute);font-size:15px}
+.card a{font-size:12px;letter-spacing:.2em;text-transform:uppercase;border-bottom:1px solid var(--gold);align-self:flex-start;padding-bottom:4px}
+.head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}@media(max-width:860px){.split{grid-template-columns:1fr;gap:40px}}
+.split .img{aspect-ratio:4/5;border-radius:8px;overflow:hidden;background:var(--bg2)}
+.quote{font:italic 300 clamp(26px,3vw,36px)/1.3 "Cormorant Garamond",serif;margin:28px 0;padding-left:24px;border-left:1px solid var(--gold)}
+.sig{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
+.ba{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:56px}.ba div{aspect-ratio:1;border-radius:6px;overflow:hidden;background:var(--bg2)}
+@media(max-width:700px){.ba{grid-template-columns:repeat(2,1fr)}}
+.dark-s{background:var(--deep);color:#F3E9E2}.dark-s .mute{color:#cdbbb3}
+.units{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(243,233,226,.15);margin-top:64px}
+.unit{padding:44px 32px 44px 0;border-right:1px solid rgba(243,233,226,.15)}.unit+.unit{padding-left:32px}.unit:last-child{border:0}
+.unit small{color:var(--gold);letter-spacing:.24em;text-transform:uppercase;font-size:11px}.unit h3{font-size:44px;margin:14px 0}.unit ul{list-style:none;font-size:14px;color:#cdbbb3;margin:20px 0 28px}.unit li{padding:6px 0;border-bottom:1px solid rgba(243,233,226,.08)}
+@media(max-width:860px){.units{grid-template-columns:1fr}.unit,.unit+.unit{padding:36px 0;border-right:0;border-bottom:1px solid rgba(243,233,226,.15)}}
+.press{display:grid;gap:0;margin-top:48px}.press a{display:flex;justify-content:space-between;gap:24px;padding:28px 0;border-bottom:1px solid var(--line);font:300 clamp(20px,2.4vw,30px)/1.3 "Cormorant Garamond",serif;transition:.4s}.press a span{font:400 11px Inter;letter-spacing:.2em;color:var(--gold);white-space:nowrap}.press a:hover{padding-left:16px;color:var(--rose)}
+.cta{text-align:center;background:linear-gradient(180deg,var(--bg),var(--bg2))}.cta h2{font-size:clamp(48px,8vw,110px)}
+footer{padding:72px 0 40px;border-top:1px solid var(--line);font-size:14px;color:var(--mute)}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}@media(max-width:760px){.fgrid{grid-template-columns:1fr 1fr}}
+footer h4{font:400 11px Inter;letter-spacing:.24em;text-transform:uppercase;color:var(--ink);margin-bottom:16px}footer li{list-style:none;padding:4px 0}footer a:hover{color:var(--gold)}
+.copy{margin-top:56px;font-size:12px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.r{opacity:0;transform:translateY(40px);transition:1.1s cubic-bezier(.2,.7,.2,1)}.r.in{opacity:1;transform:none}
+.wa{position:fixed;right:20px;bottom:20px;z-index:60;background:var(--ink);color:var(--bg);border-radius:999px;padding:14px 22px;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+@media(prefers-reduced-motion:reduce){.r{opacity:1;transform:none;transition:none}}
+
+.fh{position:relative;height:100svh;min-height:640px;color:#F7EFEA;overflow:hidden}.fh>img{position:absolute;inset:0;animation:kb 14s ease-out both}
+@keyframes kb{from{transform:scale(1.12)}to{transform:scale(1)}}
+.veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,22,22,.35) 0%,rgba(30,22,22,.05) 40%,rgba(30,22,22,.65) 100%)}
+.fhc{position:relative;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:56px}
+.fh h1{font-size:clamp(52px,9vw,140px);margin:18px 0 28px;max-width:1100px}.fh h1 em{color:#E8C9C6}
+.fhb{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap}.fhb p{max-width:420px;color:#E9DDD8}
+.fh .stats{border-color:rgba(255,255,255,.2)}.fh .stats span{color:#E9DDD8}
+.btn.light{background:#F7EFEA;color:#2E2626}.btn.light:hover{background:var(--rose)}.btn.ghost{border:1px solid rgba(255,255,255,.6);color:#fff}.btn.ghost:hover{background:#fff;color:#2E2626}
+nav:not(.s){color:#F7EFEA}
+.bleed{position:relative;min-height:110vh;display:flex;align-items:center;padding:0}.bleed>img{position:absolute;inset:0}
+.bleed .wrap{position:relative;width:100%;display:flex;justify-content:flex-end}
+.glass{max-width:520px;padding:clamp(32px,5vw,64px);background:color-mix(in srgb,var(--bg) 78%,transparent);backdrop-filter:blur(20px);border-radius:4px}.glass p{color:var(--mute)}
+.card.ph{min-height:560px;color:#F7EFEA;background:linear-gradient(180deg,transparent 35%,rgba(30,22,22,.8)),var(--i) center/cover}.card.ph p{color:#E9DDD8}
+.card.ph:hover{transform:translateY(-6px);background:linear-gradient(180deg,rgba(30,22,22,.2),rgba(30,22,22,.9)),var(--i) center/cover}
+.split .img{aspect-ratio:3/4}
+.photo{background:linear-gradient(rgba(40,30,30,.78),rgba(40,30,30,.86)),var(--i) center/cover fixed}
+.cta.photo{color:#F7EFEA;padding:clamp(140px,20vw,260px) 0}.cta.photo p{color:#E9DDD8!important}.cta.photo .btn.dark{background:#F7EFEA;color:#2E2626}
+@media(max-width:860px){.photo{background-attachment:scroll}}
+
+/* hero v3 estilo Dermato */
+nav,nav.s{background:var(--bg);border-bottom:0;backdrop-filter:none;color:var(--ink)}
+nav:not(.s){color:var(--ink)}
+nav .wrap{display:grid;grid-template-columns:1fr auto 1fr;height:84px;max-width:none;padding:0 clamp(16px,5vw,100px)}
+nav ul.nl{display:flex;gap:6px;list-style:none;font-size:15px;letter-spacing:0;text-transform:none}
+nav ul.nl a{padding:8px 14px;border-radius:999px;display:block}nav ul.nl a.on{background:color-mix(in srgb,var(--rose) 22%,var(--bg));color:var(--gold)}
+nav .logo{text-transform:none;letter-spacing:.02em;font-size:30px;display:flex;align-items:center;gap:10px}.fl{color:var(--gold)}
+.book{justify-self:end;display:flex;align-items:center;gap:12px;background:var(--bg2);border-radius:999px;padding:12px 24px 12px 12px;font-size:14px}
+.book .dot{width:34px;height:34px;border-radius:50%;background:var(--bg);display:grid;place-items:center;color:var(--ink);font-size:14px}
+@media(max-width:860px){nav .wrap{grid-template-columns:1fr auto}nav ul.nl{display:none}.book{display:none}}
+.fh{margin-top:84px;height:calc(100svh - 84px);min-height:620px}
+.fh>img{object-position:50% 40%}
+.veil{background:linear-gradient(180deg,rgba(28,20,18,.78) 0%,rgba(28,20,18,.45) 45%,rgba(28,20,18,.2) 100%)}
+.fhc{align-items:center;text-align:center;justify-content:flex-start;padding-top:clamp(40px,8vh,100px)}
+.fh h1{font-size:clamp(44px,7vw,104px);max-width:1000px;margin:0 0 24px;font-weight:400;text-shadow:0 2px 30px rgba(0,0,0,.25)}
+.fh .sub{max-width:500px;font-size:clamp(15px,1.4vw,19px);font-weight:400;color:#F7EFEA;line-height:1.5}
+.fan{position:absolute;left:50%;bottom:0;width:0;height:0}
+.pill{position:absolute;left:-28px;top:-350px;width:56px;height:190px;border-radius:30px;background:rgba(255,235,225,.16);border:1px solid rgba(255,235,225,.35);backdrop-filter:blur(8px);display:flex;flex-direction:column;align-items:center;padding-top:8px;gap:10px;color:#fff;font-size:15px;transform-origin:50% 350px;transform:translateY(0) rotate(var(--a));transition:.5s}
+.pill i{width:36px;height:36px;border-radius:50%;background:var(--p) center/cover;flex:none}.pill span{writing-mode:vertical-rl;white-space:nowrap}
+.pill:hover{background:rgba(255,235,225,.34);transform:rotate(var(--a)) translateY(-14px)}
+.notch{position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:min(300px,70vw);height:116px;background:var(--bg);border-radius:150px 150px 0 0;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding-bottom:20px;font-size:15px;color:var(--ink);gap:4px}
+.notch .fl{font-size:20px}
+@media(max-width:860px){.fan{display:none}.fh{min-height:560px}}
+
+/* v4: tipografia e estilo Dermato */
+:root{--bg:#FDF5F1;--bg2:#F9ECE6;--ink:#4A2B21;--ac:#9A5238;--mute:#8A6A5E;--gold:#9A5238;--rose:#B8745A;--line:rgba(154,82,56,.16)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ac:#E3A58C;--gold:#E3A58C}}
+:root[data-theme="dark"]{--ac:#E3A58C;--gold:#E3A58C}
+body{font-family:"Hanken Grotesk",sans-serif;font-weight:400}
+h2,h3,.logo,.stats b,.card h3,.unit h3,.press a,.quote{font-family:"Hanken Grotesk",sans-serif;font-weight:400;letter-spacing:-.03em;color:var(--ac)}
+h2{font-size:clamp(34px,4.6vw,60px);line-height:1.08}h2 em,h1 em{font-style:normal;color:inherit}
+.fh h1,.fh h1 em{font-family:"Cormorant Garamond",serif;font-weight:400;color:#fff}.fh h1 em{font-style:italic;color:#F3D2C4}
+.logo{color:var(--ink)}.logo i{color:var(--ac);font-style:normal}
+.eyebrow{font-size:14px;letter-spacing:0;text-transform:none;color:var(--ac);gap:8px}.eyebrow:before{width:4px;height:4px;border-radius:50%}
+.btn{text-transform:none;letter-spacing:0;font-size:15px;padding:16px 28px}
+.btn.dark{background:var(--ac);color:#fff}.btn.dark:hover{background:var(--ink)}.btn.line{border:1px solid var(--ac);color:var(--ac)}.btn.line:hover{background:var(--ac);color:#fff}
+nav ul.nl a.on{color:var(--ac)}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:56px}
+.tile{border-radius:28px;overflow:hidden;aspect-ratio:1;position:relative}
+.tile.t{background:var(--bg2);border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:14px;padding:32px;transition:.4s}
+.tile.t:hover{background:var(--ac);color:#fff}.tile.t:hover h3,.tile.t:hover p,.tile.t:hover .ic{color:#fff}
+.tile .ic{font-size:30px;color:var(--ac)}.tile h3{font-size:clamp(26px,2.6vw,38px);line-height:1.08}.tile p{font-size:14px;color:var(--mute);max-width:220px}
+.tile.p img{transition:transform 1.4s cubic-bezier(.2,.7,.2,1)}.tile.p:hover img{transform:scale(1.05)}
+@media(max-width:860px){.tiles{grid-template-columns:1fr 1fr}.tiles .tile{order:0!important}}
+.trio{display:grid;grid-template-columns:1fr 1.2fr 1fr;gap:10px;min-height:560px}.trio .tile{aspect-ratio:auto}.tile.t.c{padding:40px}
+@media(max-width:860px){.trio{grid-template-columns:1fr}.trio .tile{min-height:360px}}
+.split .img{border-radius:28px}.glass{border-radius:28px}
+.cta2{position:relative;padding:0;min-height:90vh;display:grid;place-items:center;overflow:hidden}.cta2>img{position:absolute;inset:0;object-position:50% 30%}
+.ctac{position:relative;background:var(--bg);border-radius:28px;padding:clamp(40px,6vw,88px);max-width:760px;width:calc(100% - 32px);text-align:center;margin:80px 0}
+.ctac h2{font-size:clamp(32px,4.4vw,56px);margin:16px 0 36px}
+.unit h3{color:#fff}.dark-s h2{color:#fff}.dark-s .eyebrow{color:#F3D2C4}.unit small{color:#F3D2C4}
+.press a{font-size:clamp(20px,2.2vw,28px)}
+footer h4{color:var(--ac)}
+#midia,.trio-s{padding-top:clamp(80px,10vw,140px);padding-bottom:clamp(60px,8vw,110px)}
+.dark-s .btn.line{border-color:#F3D2C4;color:#F3D2C4}.dark-s .btn.line:hover{background:#F3D2C4;color:#2E2626}
+
+.logo .lg{width:auto;height:46px}.logo .d{display:none}footer .logo .lg{height:42px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .logo .l{display:none}:root:not([data-theme="light"]) .logo .d{display:block}}
+:root[data-theme="dark"] .logo .l{display:none}:root[data-theme="dark"] .logo .d{display:block}
+.fh h1,.fh h1 em{font-family:"Hanken Grotesk",sans-serif;font-weight:400;letter-spacing:-.035em}.fh h1 em{font-style:normal}
+.fh h1{font-size:clamp(34px,5.2vw,76px);max-width:1100px;line-height:1.06}
+.fh .sub{max-width:460px}
+.split .img.pri{overflow:visible;background:none;position:relative;aspect-ratio:4/5}.split .img.pri>img{border-radius:28px;object-position:50% 30%}
+.pri .inset{position:absolute;right:-28px;bottom:-36px;width:42%;aspect-ratio:3/4;border-radius:22px;overflow:hidden;border:6px solid var(--bg2);box-shadow:0 24px 60px rgba(74,43,33,.25)}
+.pri .inset img{object-position:62% 55%}
+@media(max-width:860px){.pri .inset{right:12px;bottom:-28px}.split{gap:64px}}
+.sig{text-transform:none;letter-spacing:0;font-size:14px}
+/* hero com foto da Dra. Pricila */
+.fh>img{object-position:72% 40%}
+.veil{background:linear-gradient(90deg,rgba(30,20,16,.78) 0%,rgba(30,20,16,.5) 38%,rgba(30,20,16,0) 62%),linear-gradient(180deg,rgba(30,20,16,.25),rgba(30,20,16,0) 40%)}
+.fhc{align-items:flex-start;text-align:left;max-width:none;padding-left:clamp(20px,5vw,100px);padding-right:0}
+.fh h1{font-size:clamp(34px,4.4vw,68px);max-width:min(640px,44vw)}
+.fh .sub{max-width:420px}
+.fan{left:22%;transform:scale(.78);transform-origin:50% 0}
+.notch{left:22%;width:min(250px,60vw);height:100px}
+@media(max-width:1100px){.fan{display:none}.notch{left:50%}.fh h1{max-width:90%}.veil{background:linear-gradient(180deg,rgba(30,20,16,.7),rgba(30,20,16,.3))}}
+</style>
+</head>
+<body>
+<nav id="nav"><div class="wrap">
+<ul class="nl"><li><a href="#" class="on">Início</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#protocolos">Protocolos</a></li><li><a href="#unidades">Unidades</a></li></ul>
+<a href="#" class="logo" aria-label="La Primore"><img class="lg l" src="img/logo-terracota.png" alt="La Primore"><img class="lg d" src="img/logo-branca.png" alt="La Primore"></a>
+<a class="book" href="https://api.whatsapp.com/send?phone=5547992706585"><span class="dot">✿</span>Agendar avaliação</a></div></nav>
+
+<header class="fh"><img src="img/pricila-hero.jpg" alt="Dra. Pricila Hermes Tillmann na La Primore Clínica"><div class="veil"></div>
+ <div class="wrap fhc"><h1>Pele saudável e confiante<br><em>começa aqui</em></h1>
+ <p class="sub">Procedimentos autorais e personalizados, criados por Pricila Hermes, para uma verdadeira imersão em autocuidado.</p>
+ <div class="fan"><a class="pill" href="#protocolos" style="--a:-70deg;--p:url(img/6030377181.jpg)"><i></i><span>Diástase PH</span></a><a class="pill" href="#protocolos" style="--a:-50deg;--p:url(img/6030375835.jpg)"><i></i><span>Flaci OFF</span></a><a class="pill" href="#protocolos" style="--a:-30deg;--p:url(img/6030383419.jpg)"><i></i><span>Crio da Pri</span></a><a class="pill" href="#protocolos" style="--a:-10deg;--p:url(img/6030376819.jpg)"><i></i><span>Pele radiante</span></a><a class="pill" href="#protocolos" style="--a:10deg;--p:url(img/6030374391.jpg)"><i></i><span>Estrias</span></a><a class="pill" href="#protocolos" style="--a:30deg;--p:url(img/6030377181.jpg)"><i></i><span>Celulite OFF</span></a><a class="pill" href="#protocolos" style="--a:50deg;--p:url(img/6030375835.jpg)"><i></i><span>Limpeza de pele</span></a><a class="pill" href="#protocolos" style="--a:70deg;--p:url(img/6030383419.jpg)"><i></i><span>Hot Lipo</span></a></div>
+ <a class="notch" href="#protocolos"><span class="fl">✿</span>Explorar nossos tratamentos</a></div></header>
+<section class="bleed"><img src="img/6030376819.jpg" alt="Pele radiante"><div class="wrap"><div class="glass r"><span class="eyebrow">Nossa essência</span><h2>Resultados e experiências <em>transformadoras</em></h2><p>Cada protocolo é pensado para você, com técnicas exclusivas, atendimento personalizado e instalações confortáveis.</p></div></div></section>
+
+<section id="protocolos" class="wrap" style="padding-top:clamp(80px,10vw,140px)">
+ <div class="head r"><div><span class="eyebrow">Protocolos assinatura</span><h2>Conheça nossos protocolos</h2></div><a class="btn line" href="https://laprimore.com.br/procedimentos/">Ver todos</a></div>
+ <div class="tiles">
+  <a class="tile t r" href="https://laprimore.com.br/procedimentos/"><span class="ic">◎</span><h3>Diástase<br>PH</h3><p>Correção de diástase abdominal</p></a>
+  <div class="tile p r"><img src="img/6030377181.jpg" alt="Diástase PH" loading="lazy"></div>
+  <a class="tile t r" href="https://laprimore.com.br/procedimentos/"><span class="ic">✦</span><h3>Flaci<br>OFF</h3><p>Firmeza e redução da flacidez</p></a>
+  <div class="tile p r"><img src="img/6030375835.jpg" alt="Flaci OFF" loading="lazy"></div>
+  <a class="tile t r" href="https://laprimore.com.br/procedimentos/"><span class="ic">❄</span><h3>Crio<br>da Pri</h3><p>Gordura localizada, técnica autoral</p></a>
+  <div class="tile p r"><img src="img/6030383419.jpg" alt="Crio da Pri" loading="lazy" style="object-position:30% 50%"></div>
+ </div>
+ <p class="r" style="margin-top:40px;color:var(--mute);font-size:14px;text-align:center">Também: Estrias · Celulite OFF · Limpeza de Pele · Melasma OFF · Peeling Pele de Porcelana · Hot Lipo · Baby Skin PH · Depilação a Laser</p>
+</section>
+
+<section id="sobre" style="background:var(--bg2)"><div class="wrap split">
+ <div class="img r pri"><img src="img/pricila-consultorio.jpg" alt="Dra. Pricila Hermes Tillmann na La Primore Clínica" loading="lazy"><div class="inset"><img src="img/pricila-sentada.jpg" alt="Dra. Pricila Hermes Tillmann atendendo" loading="lazy"></div></div>
+ <div class="r"><span class="eyebrow">Sobre a La Primore</span><h2>Conheça a Dra. Pricila Hermes Tillmann</h2>
+  <p style="color:var(--mute)">Fundadora e proprietária da La Primore, a fisioterapeuta Pricila Hermes Tillmann começou em uma pequena sala comercial em Luiz Alves. Hoje conduz a clínica em três cidades de Santa Catarina, com protocolos autorais e atendimento personalizado.</p>
+  <p class="quote">“Estética, necessidade ou luxo?”</p><p class="sig">Dra. Pricila Hermes Tillmann · Fundadora</p>
+  <a class="btn dark" style="margin-top:36px" href="https://laprimore.com.br/sobre-nos/">Nossa história</a></div>
+</div></section>
+
+<section class="wrap trio-s"><div class="trio">
+ <div class="tile p r"><img src="img/6030376819.jpg" alt="Pele radiante" loading="lazy" style="object-position:50% 25%"></div>
+ <div class="tile t c r"><span class="eyebrow">Siga-nos</span><h2 style="font-size:clamp(28px,3vw,42px);margin:16px 0 28px">Dicas de skincare e bastidores no Instagram</h2><a class="btn line" href="https://www.instagram.com/laprimoreclinic/">Visitar Instagram</a></div>
+ <div class="tile p r"><img src="img/6030375835.jpg" alt="Tratamento" loading="lazy" style="object-position:50% 30%"></div>
+</div></section>
+
+<section id="unidades" class="dark-s photo" style="--i:url('img/6030374391.jpg')"><div class="wrap">
+ <div class="r"><span class="eyebrow">Unidades</span><h2>Três endereços, <em>um</em> cuidado</h2></div>
+ <div class="units">
+  <div class="unit r"><small>Primeira unidade</small><h3>Luiz Alves</h3><p class="mute">5 consultórios</p><ul><li>Estacionamento gratuito</li><li>Ar-condicionado · Wi-Fi</li><li>Técnicas exclusivas</li></ul><a class="btn line" href="https://laprimore.com.br/unidade/luiz-alves/">Ver unidade</a></div>
+  <div class="unit r"><small>Segunda unidade</small><h3>Balneário Camboriú</h3><p class="mute">6 consultórios</p><ul><li>Ar-condicionado · Wi-Fi</li><li>Atendimento personalizado</li><li>Instalações confortáveis</li></ul><a class="btn line" href="https://laprimore.com.br/unidade/balneario-camboriu/">Ver unidade</a></div>
+  <div class="unit r"><small>Terceira unidade</small><h3>Blumenau</h3><p class="mute">4 consultórios · R. João Pessoa, 440</p><ul><li>Elevador</li><li>Ar-condicionado · Wi-Fi</li><li>Técnicas exclusivas</li></ul><a class="btn line" href="https://laprimore.com.br/unidade/blumenau/">Ver unidade</a></div>
+ </div></div></section>
+
+<section id="midia" class="wrap"><div class="r"><span class="eyebrow">Na mídia</span><h2>Veja a <em>gente</em></h2></div>
+ <div class="press">
+  <a class="r" href="https://egobrazil.ig.com.br">La Primore, clínica estética criada por uma das maiores profissionais da estética <span>EGO BRAZIL</span></a>
+  <a class="r" href="https://egobrazil.ig.com.br">O segredo por trás da popularidade do curso Crio da Pri <span>EGO BRAZIL</span></a>
+  <a class="r" href="https://egobrazil.ig.com.br">Pricila Hermes conta sua trajetória de sucesso <span>EGO BRAZIL</span></a>
+  <a class="r" href="https://cartaodevisita.r7.com">Estética, necessidade ou luxo? Por Pricila Hermes <span>R7</span></a>
+ </div></section>
+
+<section class="cta2"><img src="img/6030376819.jpg" alt="" loading="lazy"><div class="ctac r"><span class="eyebrow" style="justify-content:center">Agende sua avaliação</span><h2>Pronta para iniciar sua jornada de autocuidado?</h2>
+ <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap"><a class="btn dark" href="https://api.whatsapp.com/send?phone=5547992706585">Falar no WhatsApp</a><a class="btn line" href="#protocolos">Ver protocolos</a></div></div></section>
+
+<footer><div class="wrap"><div class="fgrid">
+ <div><a class="logo" aria-label="La Primore"><img class="lg l" src="img/logo-terracota.png" alt="La Primore"><img class="lg d" src="img/logo-branca.png" alt="La Primore"></a><p style="margin-top:16px;max-width:300px">Renovando a sua autoestima, espalhando sorrisos.</p></div>
+ <div><h4>Institucional</h4><ul><li><a href="#unidades">Unidades</a></li><li><a href="https://laprimore.com.br/sobre-nos/">Sobre nós</a></li><li><a href="https://laprimore.com.br/blog/">Blog</a></li></ul></div>
+ <div><h4>Contato</h4><ul><li><a href="https://api.whatsapp.com/send?phone=5547992706585">WhatsApp</a></li><li><a href="https://www.instagram.com/laprimoreclinic/">Instagram</a></li><li><a href="https://facebook.com/laprimore">Facebook</a></li></ul></div>
+ <div><h4>Ajuda</h4><ul><li><a href="https://laprimore.com.br/sobre-nos#perguntas-frequentes">Perguntas frequentes</a></li><li><a href="#">Privacidade</a></li></ul></div>
+</div><div class="copy"><span>© 2026 La Primore. Todos os direitos reservados.</span><span>Blumenau · Luiz Alves · Balneário Camboriú</span></div></div></footer>
+<a class="wa" href="https://api.whatsapp.com/send?phone=5547992706585">WhatsApp</a>
+<script>
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.r').forEach((el,i)=>{el.style.transitionDelay=(i%3)*90+'ms';io.observe(el)});
+addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('s',scrollY>40));
+</script>
+</body></html>
