@@ -214,6 +214,19 @@ footer h4{color:var(--ac)}
  .wa{bottom:78px}
 }
 @media(prefers-reduced-motion:reduce){.mt{animation:none}}
+
+/* hero mobile v2: foto primeiro, texto e CTA abaixo */
+@media(max-width:900px){
+ .fh{display:block;min-height:0;height:auto;background:#2a1d18}
+ .fh>img{position:relative;inset:auto;display:block;width:100%;height:clamp(250px,42svh,360px);top:auto;bottom:auto;object-fit:cover;object-position:58% 18%;-webkit-mask-image:linear-gradient(180deg,#000 72%,transparent);mask-image:linear-gradient(180deg,#000 72%,transparent)}
+ .veil{display:none}
+ .fhc{min-height:0;display:block;position:relative;margin-top:-34px;padding:0 20px 26px}
+ .fh h1{font-size:clamp(27px,7.8vw,36px);line-height:1.08;margin:0 0 12px}
+ .fh .sub{font-size:14.5px;line-height:1.5;margin:0}
+ .hcta{margin-top:18px;padding:14px 26px}
+ .mq{margin:30px -20px 0;padding-top:0}
+ .wa{bottom:16px}
+}
 </style>
 </head>
 <body>
