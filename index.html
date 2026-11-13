@@ -157,48 +157,106 @@ footer h4{color:var(--ac)}
 .fan{left:22%;transform:scale(.78);transform-origin:50% 0}
 .notch{left:22%;width:min(250px,60vw);height:100px}
 @media(max-width:1100px){.fan{display:none}.notch{left:50%}.fh h1{max-width:90%}.veil{background:linear-gradient(180deg,rgba(30,20,16,.7),rgba(30,20,16,.3))}}
+
+/* v5 conteúdo ampliado */
+.lead{max-width:420px;color:var(--mute)}
+.strip{padding:clamp(48px,6vw,80px) 0;background:var(--bg)}.sg{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:left}
+.sg b{display:block;font:400 clamp(44px,5vw,72px)/1 "Hanken Grotesk",sans-serif;letter-spacing:-.04em;color:var(--ac)}.sg span{font-size:14px;color:var(--mute);display:block;margin-top:8px;max-width:180px}
+@media(max-width:760px){.sg{grid-template-columns:1fr 1fr}}
+.plist{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:48px}
+.pi{position:relative;background:var(--bg2);border:1px solid var(--line);border-radius:24px;padding:30px 28px 34px;display:flex;flex-direction:column;gap:10px;min-height:230px;transition:.4s}
+.pi .n{font-size:14px;color:var(--mute)}.pi h3{font-size:26px;margin-top:auto}.pi p{font-size:14px;color:var(--mute)}.pi i{position:absolute;right:24px;top:24px;font-style:normal;color:var(--ac);transition:.4s}
+.pi:hover{background:var(--ac);color:#fff}.pi:hover h3,.pi:hover p,.pi:hover .n,.pi:hover i{color:#fff}
+@media(max-width:900px){.plist{grid-template-columns:1fr 1fr}}@media(max-width:560px){.plist{grid-template-columns:1fr}}
+.tech{padding-top:clamp(80px,10vw,140px);padding-bottom:clamp(60px,8vw,110px)}.tech .split .img{aspect-ratio:4/3}
+.ticks{list-style:none;margin-top:28px}.ticks li{padding:14px 0 14px 32px;border-bottom:1px solid var(--line);position:relative;font-size:15px}.ticks li:before{content:"✦";position:absolute;left:0;color:var(--ac)}
+.steps-s{background:var(--bg2)}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:56px}
+.st{background:var(--bg);border-radius:24px;padding:32px 28px;display:flex;flex-direction:column;gap:12px;min-height:260px}.st span{font-size:14px;color:var(--mute)}.st h3{font-size:28px;margin-top:auto}.st p{font-size:14px;color:var(--mute)}
+@media(max-width:900px){.steps{grid-template-columns:1fr 1fr}}@media(max-width:560px){.steps{grid-template-columns:1fr}}
+.duo{display:grid;grid-template-columns:1.4fr 1fr;gap:10px;margin-top:10px;height:clamp(300px,36vw,500px)}.duo .tile{aspect-ratio:auto;height:100%}
+@media(max-width:700px){.duo{grid-template-columns:1fr;height:auto}.duo .tile{height:320px}}
+.feat-s{padding-top:clamp(80px,10vw,140px);padding-bottom:clamp(80px,10vw,140px)}.feat{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:56px;border-top:1px solid var(--line)}
+.feat>div{padding:36px 28px 36px 0;border-right:1px solid var(--line)}.feat>div+div{padding-left:28px}.feat>div:last-child{border:0}
+.feat .ic{color:var(--ac);font-size:26px}.feat h3{font-size:26px;margin:20px 0 10px}.feat p{font-size:14px;color:var(--mute)}
+@media(max-width:900px){.feat{grid-template-columns:1fr 1fr}.feat>div,.feat>div+div{padding:28px 20px 28px 0;border:0;border-bottom:1px solid var(--line)}}
+.tl{list-style:none;margin:28px 0 8px;border-left:1px solid var(--line);padding-left:24px}.tl li{padding:8px 0;position:relative}.tl li:before{content:"";position:absolute;left:-29px;top:18px;width:9px;height:9px;border-radius:50%;background:var(--ac)}
+.tl b{display:block;font-weight:500;color:var(--ac)}.tl span{font-size:14px;color:var(--mute)}
+.faq-s{padding-top:clamp(80px,10vw,140px);padding-bottom:clamp(80px,10vw,140px)}.fq{align-items:start}
+.faq details{border-bottom:1px solid var(--line);padding:22px 0}.faq summary{cursor:pointer;list-style:none;font-size:clamp(18px,1.8vw,22px);color:var(--ac);display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}.faq summary:after{content:"+";font-size:26px;line-height:1;transition:.3s}.faq details[open] summary:after{transform:rotate(45deg)}
+.faq p{margin-top:14px;color:var(--mute);font-size:15px;max-width:560px}
 </style>
 </head>
 <body>
 <nav id="nav"><div class="wrap">
-<ul class="nl"><li><a href="#" class="on">Início</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#protocolos">Protocolos</a></li><li><a href="#unidades">Unidades</a></li></ul>
+<ul class="nl"><li><a href="#" class="on">Início</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#protocolos">Protocolos</a></li><li><a href="#unidades">Unidades</a></li><li><a href="#duvidas">Dúvidas</a></li></ul>
 <a href="#" class="logo" aria-label="La Primore"><img class="lg l" src="img/logo-terracota.png" alt="La Primore"><img class="lg d" src="img/logo-branca.png" alt="La Primore"></a>
 <a class="book" href="https://api.whatsapp.com/send?phone=5547992706585"><span class="dot">✿</span>Agendar avaliação</a></div></nav>
 
 <header class="fh"><img src="img/pricila-hero.jpg" alt="Dra. Pricila Hermes Tillmann na La Primore Clínica"><div class="veil"></div>
  <div class="wrap fhc"><h1>Pele saudável e confiante<br><em>começa aqui</em></h1>
  <p class="sub">Procedimentos autorais e personalizados, criados por Pricila Hermes, para uma verdadeira imersão em autocuidado.</p>
- <div class="fan"><a class="pill" href="#protocolos" style="--a:-70deg;--p:url(img/6030377181.jpg)"><i></i><span>Diástase PH</span></a><a class="pill" href="#protocolos" style="--a:-50deg;--p:url(img/6030375835.jpg)"><i></i><span>Flaci OFF</span></a><a class="pill" href="#protocolos" style="--a:-30deg;--p:url(img/6030383419.jpg)"><i></i><span>Crio da Pri</span></a><a class="pill" href="#protocolos" style="--a:-10deg;--p:url(img/6030376819.jpg)"><i></i><span>Pele radiante</span></a><a class="pill" href="#protocolos" style="--a:10deg;--p:url(img/6030374391.jpg)"><i></i><span>Estrias</span></a><a class="pill" href="#protocolos" style="--a:30deg;--p:url(img/6030377181.jpg)"><i></i><span>Celulite OFF</span></a><a class="pill" href="#protocolos" style="--a:50deg;--p:url(img/6030375835.jpg)"><i></i><span>Limpeza de pele</span></a><a class="pill" href="#protocolos" style="--a:70deg;--p:url(img/6030383419.jpg)"><i></i><span>Hot Lipo</span></a></div>
+ <div class="fan"><a class="pill" href="#protocolos" style="--a:-70deg;--p:url(img/6030377181.jpg)"><i></i><span>Diástase PH</span></a><a class="pill" href="#protocolos" style="--a:-50deg;--p:url(img/6030375835.jpg)"><i></i><span>Flaci OFF</span></a><a class="pill" href="#protocolos" style="--a:-30deg;--p:url(img/6030383419.jpg)"><i></i><span>Crio da Pri</span></a><a class="pill" href="#protocolos" style="--a:-10deg;--p:url(img/pele-radiante.jpg)"><i></i><span>Pele radiante</span></a><a class="pill" href="#protocolos" style="--a:10deg;--p:url(img/6030374391.jpg)"><i></i><span>Estrias</span></a><a class="pill" href="#protocolos" style="--a:30deg;--p:url(img/6030377181.jpg)"><i></i><span>Celulite OFF</span></a><a class="pill" href="#protocolos" style="--a:50deg;--p:url(img/6030375835.jpg)"><i></i><span>Limpeza de pele</span></a><a class="pill" href="#protocolos" style="--a:70deg;--p:url(img/6030383419.jpg)"><i></i><span>Hot Lipo</span></a></div>
  <a class="notch" href="#protocolos"><span class="fl">✿</span>Explorar nossos tratamentos</a></div></header>
-<section class="bleed"><img src="img/6030376819.jpg" alt="Pele radiante"><div class="wrap"><div class="glass r"><span class="eyebrow">Nossa essência</span><h2>Resultados e experiências <em>transformadoras</em></h2><p>Cada protocolo é pensado para você, com técnicas exclusivas, atendimento personalizado e instalações confortáveis.</p></div></div></section>
+<section class="bleed"><img src="img/6030374391.jpg" alt="Recepção da La Primore"><div class="wrap"><div class="glass r"><span class="eyebrow">Nossa essência</span><h2>Resultados e experiências transformadoras</h2><p>Cada protocolo é pensado para você: técnicas exclusivas, atendimento personalizado e um ambiente criado para que o autocuidado seja, de fato, um momento seu.</p><a class="btn dark" style="margin-top:28px" href="#protocolos">Conheça os protocolos</a></div></div></section>
+
+<section class="strip"><div class="wrap sg">
+ <div class="r"><b>3</b><span>unidades em Santa Catarina</span></div>
+ <div class="r"><b>15</b><span>consultórios equipados</span></div>
+ <div class="r"><b>11</b><span>protocolos de estética</span></div>
+ <div class="r"><b>1:1</b><span>atendimento individual e personalizado</span></div>
+</div></section>
 
 <section id="protocolos" class="wrap" style="padding-top:clamp(80px,10vw,140px)">
- <div class="head r"><div><span class="eyebrow">Protocolos assinatura</span><h2>Conheça nossos protocolos</h2></div><a class="btn line" href="https://laprimore.com.br/procedimentos/">Ver todos</a></div>
+ <div class="head r"><div><span class="eyebrow">Protocolos assinatura</span><h2>Os tratamentos que<br>marcam a La Primore</h2></div><p class="lead r">Três protocolos autorais que nasceram da prática clínica da fundadora e se tornaram a assinatura da clínica.</p></div>
  <div class="tiles">
-  <a class="tile t r" href="https://laprimore.com.br/procedimentos/"><span class="ic">◎</span><h3>Diástase<br>PH</h3><p>Correção de diástase abdominal</p></a>
+  <a class="tile t r" href="https://laprimore.com.br/procedimentos/"><span class="ic">◎</span><h3>Diástase<br>PH</h3><p>Correção de diástase abdominal com protocolo exclusivo</p></a>
   <div class="tile p r"><img src="img/6030377181.jpg" alt="Diástase PH" loading="lazy"></div>
-  <a class="tile t r" href="https://laprimore.com.br/procedimentos/"><span class="ic">✦</span><h3>Flaci<br>OFF</h3><p>Firmeza e redução da flacidez</p></a>
-  <div class="tile p r"><img src="img/6030375835.jpg" alt="Flaci OFF" loading="lazy"></div>
-  <a class="tile t r" href="https://laprimore.com.br/procedimentos/"><span class="ic">❄</span><h3>Crio<br>da Pri</h3><p>Gordura localizada, técnica autoral</p></a>
+  <a class="tile t r" href="https://laprimore.com.br/procedimentos/"><span class="ic">✦</span><h3>Flaci<br>OFF</h3><p>Firmeza e redução da flacidez da pele</p></a>
+  <div class="tile p r"><img src="img/tratamento-facial.jpg" alt="Tratamento facial" loading="lazy"></div>
+  <a class="tile t r" href="https://laprimore.com.br/procedimentos/"><span class="ic">❄</span><h3>Crio<br>da Pri</h3><p>Gordura localizada com a técnica autoral de Pricila Hermes</p></a>
   <div class="tile p r"><img src="img/6030383419.jpg" alt="Crio da Pri" loading="lazy" style="object-position:30% 50%"></div>
  </div>
- <p class="r" style="margin-top:40px;color:var(--mute);font-size:14px;text-align:center">Também: Estrias · Celulite OFF · Limpeza de Pele · Melasma OFF · Peeling Pele de Porcelana · Hot Lipo · Baby Skin PH · Depilação a Laser</p>
+ <div class="head r" style="margin-top:clamp(80px,10vw,140px)"><div><span class="eyebrow">Todos os protocolos</span><h2>Cuidado completo,<br>do rosto ao corpo</h2></div></div>
+ <div class="plist"><a class="pi r" href="https://laprimore.com.br/procedimentos/"><span class="n">01</span><h3>Diástase PH</h3><p>Protocolo exclusivo para correção de diástase abdominal, com acompanhamento individualizado.</p><i>↗</i></a><a class="pi r" href="https://laprimore.com.br/procedimentos/"><span class="n">02</span><h3>Flaci OFF</h3><p>Foco em firmeza e na redução da flacidez da pele, do rosto ao corpo.</p><i>↗</i></a><a class="pi r" href="https://laprimore.com.br/procedimentos/"><span class="n">03</span><h3>Crio da Pri</h3><p>Redução de gordura localizada com a técnica autoral de Pricila Hermes.</p><i>↗</i></a><a class="pi r" href="https://laprimore.com.br/procedimentos/"><span class="n">04</span><h3>Estrias</h3><p>Protocolo para suavizar o aspecto das estrias e devolver uniformidade à pele.</p><i>↗</i></a><a class="pi r" href="https://laprimore.com.br/procedimentos/"><span class="n">05</span><h3>Celulite OFF</h3><p>Cuidado voltado à textura e ao aspecto da pele com celulite.</p><i>↗</i></a><a class="pi r" href="https://laprimore.com.br/procedimentos/"><span class="n">06</span><h3>Limpeza de Pele</h3><p>Higienização profunda para uma pele mais uniforme, limpa e luminosa.</p><i>↗</i></a><a class="pi r" href="https://laprimore.com.br/procedimentos/"><span class="n">07</span><h3>Melasma OFF</h3><p>Cuidado voltado a manchas, com foco na uniformização do tom da pele.</p><i>↗</i></a><a class="pi r" href="https://laprimore.com.br/procedimentos/"><span class="n">08</span><h3>Peeling Pele de Porcelana</h3><p>Renovação da pele para um aspecto mais liso, claro e uniforme.</p><i>↗</i></a><a class="pi r" href="https://laprimore.com.br/procedimentos/"><span class="n">09</span><h3>Hot Lipo</h3><p>Protocolo corporal para auxiliar na redução de medidas e na modelagem do contorno.</p><i>↗</i></a><a class="pi r" href="https://laprimore.com.br/procedimentos/"><span class="n">10</span><h3>Baby Skin PH</h3><p>Cuidado facial para uma pele com aspecto macio, renovado e hidratado.</p><i>↗</i></a><a class="pi r" href="https://laprimore.com.br/procedimentos/"><span class="n">11</span><h3>Depilação a Laser</h3><p>Remoção de pelos com tecnologia a laser, com conforto e atendimento cuidadoso.</p><i>↗</i></a></div>
+ <p class="r" style="margin-top:28px;color:var(--mute);font-size:13px;text-align:center">Os resultados variam de pessoa para pessoa. A indicação de cada protocolo é feita após avaliação individual.</p>
 </section>
+
+<section class="wrap tech"><div class="split">
+ <div class="img r"><img src="img/sala-tecnologia.jpg" alt="Sala de tratamento da La Primore" loading="lazy" style="object-position:35% 50%"></div>
+ <div class="r"><span class="eyebrow">Estrutura e tecnologia</span><h2>Um ambiente pensado para o seu conforto</h2>
+  <p style="color:var(--mute)">Consultórios climatizados, equipamentos modernos e uma equipe preparada para conduzir cada etapa do seu protocolo com segurança e acolhimento.</p>
+  <ul class="ticks"><li>Consultórios reservados e climatizados</li><li>Tecnologia a laser e equipamentos de última geração</li><li>Wi-Fi e ambiente de espera confortável</li><li>Atendimento individual, do início ao fim</li></ul>
+  <a class="btn dark" style="margin-top:32px" href="#unidades">Encontre sua unidade</a></div>
+</div></section>
+
+<section class="steps-s"><div class="wrap">
+ <div class="head r"><div><span class="eyebrow">Como funciona</span><h2>Sua jornada na La Primore</h2></div><p class="lead r">Do primeiro contato ao acompanhamento, cada passo é pensado para que você se sinta segura e bem cuidada.</p></div>
+ <div class="steps">
+  <div class="st r"><span>01</span><h3>Avaliação</h3><p>Conversamos sobre seus objetivos e avaliamos sua pele e seu corpo com atenção.</p></div>
+  <div class="st r"><span>02</span><h3>Plano personalizado</h3><p>Indicamos o protocolo ideal e explicamos cada etapa, sem pressa e com transparência.</p></div>
+  <div class="st r"><span>03</span><h3>Sessões</h3><p>Realizamos o tratamento em um ambiente confortável, com técnicas exclusivas da clínica.</p></div>
+  <div class="st r"><span>04</span><h3>Acompanhamento</h3><p>Acompanhamos sua evolução e orientamos os cuidados para manter os resultados.</p></div>
+ </div>
+ <div class="duo"><div class="tile p r"><img src="img/skincare-produtos.jpg" alt="Produtos de skincare" loading="lazy" style="object-position:40% 50%"></div><div class="tile p r"><img src="img/pele-radiante.jpg" alt="Pele radiante" loading="lazy" style="object-position:50% 25%"></div></div>
+</div></section>
+
+<section class="wrap feat-s"><div class="head r"><div><span class="eyebrow">Por que a La Primore</span><h2>O que nos torna diferentes</h2></div></div>
+ <div class="feat">
+  <div class="r"><span class="ic">✦</span><h3>Técnicas autorais</h3><p>Protocolos criados pela própria fundadora, que você encontra apenas aqui.</p></div>
+  <div class="r"><span class="ic">◎</span><h3>Atendimento personalizado</h3><p>Cada plano nasce da sua avaliação, e não de um pacote pronto.</p></div>
+  <div class="r"><span class="ic">❋</span><h3>Instalações acolhedoras</h3><p>Ambientes elegantes, climatizados e pensados para o seu bem-estar.</p></div>
+  <div class="r"><span class="ic">❄</span><h3>Tecnologia e método</h3><p>Equipamentos modernos aliados à experiência clínica da equipe.</p></div>
+ </div></section>
 
 <section id="sobre" style="background:var(--bg2)"><div class="wrap split">
  <div class="img r pri"><img src="img/pricila-consultorio.jpg" alt="Dra. Pricila Hermes Tillmann na La Primore Clínica" loading="lazy"><div class="inset"><img src="img/pricila-sentada.jpg" alt="Dra. Pricila Hermes Tillmann atendendo" loading="lazy"></div></div>
  <div class="r"><span class="eyebrow">Sobre a La Primore</span><h2>Conheça a Dra. Pricila Hermes Tillmann</h2>
   <p style="color:var(--mute)">Fundadora e proprietária da La Primore, a fisioterapeuta Pricila Hermes Tillmann começou em uma pequena sala comercial em Luiz Alves. Hoje conduz a clínica em três cidades de Santa Catarina, com protocolos autorais e atendimento personalizado.</p>
+  <ul class="tl"><li><b>Luiz Alves</b><span>Onde tudo começou: a primeira unidade da La Primore.</span></li><li><b>Balneário Camboriú</b><span>A segunda unidade, levando a experiência La Primore ao litoral.</span></li><li><b>Blumenau</b><span>A terceira unidade, com consultórios e estrutura completa.</span></li></ul>
   <p class="quote">“Estética, necessidade ou luxo?”</p><p class="sig">Dra. Pricila Hermes Tillmann · Fundadora</p>
-  <a class="btn dark" style="margin-top:36px" href="https://laprimore.com.br/sobre-nos/">Nossa história</a></div>
+  <a class="btn dark" style="margin-top:28px" href="https://laprimore.com.br/sobre-nos/">Nossa história</a></div>
 </div></section>
-
-<section class="wrap trio-s"><div class="trio">
- <div class="tile p r"><img src="img/6030376819.jpg" alt="Pele radiante" loading="lazy" style="object-position:50% 25%"></div>
- <div class="tile t c r"><span class="eyebrow">Siga-nos</span><h2 style="font-size:clamp(28px,3vw,42px);margin:16px 0 28px">Dicas de skincare e bastidores no Instagram</h2><a class="btn line" href="https://www.instagram.com/laprimoreclinic/">Visitar Instagram</a></div>
- <div class="tile p r"><img src="img/6030375835.jpg" alt="Tratamento" loading="lazy" style="object-position:50% 30%"></div>
-</div></section>
-
 <section id="unidades" class="dark-s photo" style="--i:url('img/6030374391.jpg')"><div class="wrap">
  <div class="r"><span class="eyebrow">Unidades</span><h2>Três endereços, <em>um</em> cuidado</h2></div>
  <div class="units">
@@ -206,7 +264,6 @@ footer h4{color:var(--ac)}
   <div class="unit r"><small>Segunda unidade</small><h3>Balneário Camboriú</h3><p class="mute">6 consultórios</p><ul><li>Ar-condicionado · Wi-Fi</li><li>Atendimento personalizado</li><li>Instalações confortáveis</li></ul><a class="btn line" href="https://laprimore.com.br/unidade/balneario-camboriu/">Ver unidade</a></div>
   <div class="unit r"><small>Terceira unidade</small><h3>Blumenau</h3><p class="mute">4 consultórios · R. João Pessoa, 440</p><ul><li>Elevador</li><li>Ar-condicionado · Wi-Fi</li><li>Técnicas exclusivas</li></ul><a class="btn line" href="https://laprimore.com.br/unidade/blumenau/">Ver unidade</a></div>
  </div></div></section>
-
 <section id="midia" class="wrap"><div class="r"><span class="eyebrow">Na mídia</span><h2>Veja a <em>gente</em></h2></div>
  <div class="press">
   <a class="r" href="https://egobrazil.ig.com.br">La Primore, clínica estética criada por uma das maiores profissionais da estética <span>EGO BRAZIL</span></a>
@@ -214,10 +271,23 @@ footer h4{color:var(--ac)}
   <a class="r" href="https://egobrazil.ig.com.br">Pricila Hermes conta sua trajetória de sucesso <span>EGO BRAZIL</span></a>
   <a class="r" href="https://cartaodevisita.r7.com">Estética, necessidade ou luxo? Por Pricila Hermes <span>R7</span></a>
  </div></section>
-
-<section class="cta2"><img src="img/6030376819.jpg" alt="" loading="lazy"><div class="ctac r"><span class="eyebrow" style="justify-content:center">Agende sua avaliação</span><h2>Pronta para iniciar sua jornada de autocuidado?</h2>
+<section id="duvidas" class="wrap faq-s"><div class="split fq">
+ <div class="r"><span class="eyebrow">Dúvidas frequentes</span><h2>Perguntas que<br>recebemos com frequência</h2><p style="color:var(--mute);max-width:380px">Não encontrou o que procurava? Fale com a nossa equipe pelo WhatsApp.</p><a class="btn line" style="margin-top:28px" href="https://api.whatsapp.com/send?phone=5547992706585">Falar no WhatsApp</a></div>
+ <div class="faq r">
+  <details open><summary>Como agendo minha avaliação?</summary><p>Basta chamar a nossa equipe pelo WhatsApp. Indicamos a unidade e o horário mais convenientes para você.</p></details>
+  <details><summary>Preciso fazer avaliação antes do tratamento?</summary><p>Sim. A avaliação permite indicar o protocolo mais adequado ao seu objetivo e às características da sua pele e do seu corpo.</p></details>
+  <details><summary>Quantas sessões são necessárias?</summary><p>Depende do protocolo e do objetivo de cada pessoa. O número de sessões é definido junto com você, na avaliação.</p></details>
+  <details><summary>Em quais cidades a La Primore atende?</summary><p>Temos unidades em Luiz Alves, Balneário Camboriú e Blumenau, todas com consultórios climatizados e atendimento personalizado.</p></details>
+  <details><summary>Os protocolos são personalizados?</summary><p>Sim. Os protocolos autorais são adaptados a cada paciente, considerando o que é mais indicado para o seu caso.</p></details>
+  <details><summary>Há estacionamento ou acessibilidade?</summary><p>A unidade de Luiz Alves conta com estacionamento gratuito e a de Blumenau possui elevador. Confirme os detalhes da sua unidade com a nossa equipe.</p></details>
+ </div></div></section>
+<section class="wrap trio-s"><div class="trio">
+ <div class="tile p r"><img src="img/skincare-produtos.jpg" alt="Skincare" loading="lazy" style="object-position:35% 50%"></div>
+ <div class="tile t c r"><span class="eyebrow">Siga-nos</span><h2 style="font-size:clamp(28px,3vw,42px);margin:16px 0 28px">Dicas de skincare e bastidores no Instagram</h2><a class="btn line" href="https://www.instagram.com/laprimoreclinic/">Visitar Instagram</a></div>
+ <div class="tile p r"><img src="img/tratamento-facial.jpg" alt="Tratamento facial" loading="lazy" style="object-position:50% 30%"></div>
+</div></section>
+<section class="cta2"><img src="img/sala-tecnologia.jpg" alt="" loading="lazy" style="object-position:50% 50%"><div class="ctac r"><span class="eyebrow" style="justify-content:center">Agende sua avaliação</span><h2>Pronta para iniciar sua jornada de autocuidado?</h2><p style="color:var(--mute);max-width:460px;margin:-12px auto 32px">Fale com a nossa equipe pelo WhatsApp e descubra o protocolo ideal para você.</p>
  <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap"><a class="btn dark" href="https://api.whatsapp.com/send?phone=5547992706585">Falar no WhatsApp</a><a class="btn line" href="#protocolos">Ver protocolos</a></div></div></section>
-
 <footer><div class="wrap"><div class="fgrid">
  <div><a class="logo" aria-label="La Primore"><img class="lg l" src="img/logo-terracota.png" alt="La Primore"><img class="lg d" src="img/logo-branca.png" alt="La Primore"></a><p style="margin-top:16px;max-width:300px">Renovando a sua autoestima, espalhando sorrisos.</p></div>
  <div><h4>Institucional</h4><ul><li><a href="#unidades">Unidades</a></li><li><a href="https://laprimore.com.br/sobre-nos/">Sobre nós</a></li><li><a href="https://laprimore.com.br/blog/">Blog</a></li></ul></div>
