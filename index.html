@@ -185,6 +185,35 @@ footer h4{color:var(--ac)}
 .faq details{border-bottom:1px solid var(--line);padding:22px 0}.faq summary{cursor:pointer;list-style:none;font-size:clamp(18px,1.8vw,22px);color:var(--ac);display:flex;justify-content:space-between;gap:16px}
 .faq summary::-webkit-details-marker{display:none}.faq summary:after{content:"+";font-size:26px;line-height:1;transition:.3s}.faq details[open] summary:after{transform:rotate(45deg)}
 .faq p{margin-top:14px;color:var(--mute);font-size:15px;max-width:560px}
+
+/* hero v6: Dra. à direita, leque girando, mobile */
+.fh>img{width:130%;max-width:none;height:100%;object-fit:cover;object-position:0 30%}
+.fh{background:#2a1d18}
+.pill{left:-30px;width:60px;height:210px;font-size:17px;top:-350px;transform-origin:50% 350px;transform:rotate(var(--a,0deg));opacity:var(--o,1);transition:background .4s}
+.pill:hover{transform:rotate(var(--a,0deg))}
+.fan{left:21%;transform:scale(.62);transform-origin:50% 0}
+.notch{left:21%;width:min(230px,60vw);height:92px;font-size:14px;padding-bottom:16px}
+.hcta,.mq{display:none}
+@media(max-width:900px){
+ nav .wrap{height:68px;grid-template-columns:1fr auto;padding:0 16px}
+ .logo .lg{height:36px}
+ .book{display:flex;padding:8px 18px;font-size:13px}.book .dot{display:none}
+ .fh{margin-top:68px;height:auto;min-height:calc(100svh - 68px);display:flex}
+ .fh>img{top:auto;bottom:0;width:100%;height:62%;object-position:56% 30%;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 28%);mask-image:linear-gradient(180deg,transparent 0,#000 28%);animation:none}
+ .veil{background:linear-gradient(180deg,rgba(42,29,24,.9) 0%,rgba(42,29,24,.35) 55%,rgba(42,29,24,.05) 100%)}
+ .fhc{min-height:calc(100svh - 68px);display:flex;flex-direction:column;padding:32px 20px 24px;align-items:flex-start;text-align:left;justify-content:flex-start;width:100%}
+ .fh h1{font-size:clamp(34px,10vw,46px);max-width:100%;margin-bottom:16px}
+ .fh .sub{font-size:15px;max-width:100%}
+ .fan,.notch{display:none}
+ .hcta{display:inline-flex;margin-top:22px}
+ .mq{display:block;position:relative;margin:auto -20px 0;padding-top:28px;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+ .mt{display:flex;gap:10px;width:max-content;animation:mq 40s linear infinite}
+ .chip{display:flex;align-items:center;gap:10px;padding:6px 18px 6px 6px;border-radius:999px;background:rgba(255,235,225,.18);border:1px solid rgba(255,235,225,.4);backdrop-filter:blur(8px);color:#fff;font-size:14px;white-space:nowrap}
+ .chip i{width:34px;height:34px;border-radius:50%;background:var(--p) center/cover;flex:none}
+ @keyframes mq{to{transform:translateX(-50%)}}
+ .wa{bottom:78px}
+}
+@media(prefers-reduced-motion:reduce){.mt{animation:none}}
 </style>
 </head>
 <body>
@@ -196,7 +225,9 @@ footer h4{color:var(--ac)}
 <header class="fh"><img src="img/pricila-hero.jpg" alt="Dra. Pricila Hermes Tillmann na La Primore Clínica"><div class="veil"></div>
  <div class="wrap fhc"><h1>Pele saudável e confiante<br><em>começa aqui</em></h1>
  <p class="sub">Procedimentos autorais e personalizados, criados por Pricila Hermes, para uma verdadeira imersão em autocuidado.</p>
- <div class="fan"><a class="pill" href="#protocolos" style="--a:-70deg;--p:url(img/6030377181.jpg)"><i></i><span>Diástase PH</span></a><a class="pill" href="#protocolos" style="--a:-50deg;--p:url(img/6030375835.jpg)"><i></i><span>Flaci OFF</span></a><a class="pill" href="#protocolos" style="--a:-30deg;--p:url(img/6030383419.jpg)"><i></i><span>Crio da Pri</span></a><a class="pill" href="#protocolos" style="--a:-10deg;--p:url(img/pele-radiante.jpg)"><i></i><span>Pele radiante</span></a><a class="pill" href="#protocolos" style="--a:10deg;--p:url(img/6030374391.jpg)"><i></i><span>Estrias</span></a><a class="pill" href="#protocolos" style="--a:30deg;--p:url(img/6030377181.jpg)"><i></i><span>Celulite OFF</span></a><a class="pill" href="#protocolos" style="--a:50deg;--p:url(img/6030375835.jpg)"><i></i><span>Limpeza de pele</span></a><a class="pill" href="#protocolos" style="--a:70deg;--p:url(img/6030383419.jpg)"><i></i><span>Hot Lipo</span></a></div>
+ <div class="fan"><a class="pill" href="#protocolos" style="--p:url(img/6030377181.jpg)"><i></i><span>Diástase PH</span></a><a class="pill" href="#protocolos" style="--p:url(img/6030375835.jpg)"><i></i><span>Flaci OFF</span></a><a class="pill" href="#protocolos" style="--p:url(img/6030383419.jpg)"><i></i><span>Crio da Pri</span></a><a class="pill" href="#protocolos" style="--p:url(img/pele-radiante.jpg)"><i></i><span>Estrias</span></a><a class="pill" href="#protocolos" style="--p:url(img/tratamento-facial.jpg)"><i></i><span>Celulite OFF</span></a><a class="pill" href="#protocolos" style="--p:url(img/skincare-produtos.jpg)"><i></i><span>Limpeza de Pele</span></a><a class="pill" href="#protocolos" style="--p:url(img/sala-tecnologia.jpg)"><i></i><span>Melasma OFF</span></a><a class="pill" href="#protocolos" style="--p:url(img/6030377181.jpg)"><i></i><span>Peeling Pele de Porcelana</span></a><a class="pill" href="#protocolos" style="--p:url(img/6030375835.jpg)"><i></i><span>Hot Lipo</span></a><a class="pill" href="#protocolos" style="--p:url(img/6030383419.jpg)"><i></i><span>Baby Skin PH</span></a><a class="pill" href="#protocolos" style="--p:url(img/pele-radiante.jpg)"><i></i><span>Depilação a Laser</span></a></div>
+ <a class="hcta btn light" href="https://api.whatsapp.com/send?phone=5547992706585">Agendar avaliação</a>
+ <div class="mq"><div class="mt"><a class="chip" href="#protocolos"><i style="--p:url(img/6030377181.jpg)"></i>Diástase PH</a><a class="chip" href="#protocolos"><i style="--p:url(img/6030375835.jpg)"></i>Flaci OFF</a><a class="chip" href="#protocolos"><i style="--p:url(img/6030383419.jpg)"></i>Crio da Pri</a><a class="chip" href="#protocolos"><i style="--p:url(img/pele-radiante.jpg)"></i>Estrias</a><a class="chip" href="#protocolos"><i style="--p:url(img/tratamento-facial.jpg)"></i>Celulite OFF</a><a class="chip" href="#protocolos"><i style="--p:url(img/skincare-produtos.jpg)"></i>Limpeza de Pele</a><a class="chip" href="#protocolos"><i style="--p:url(img/sala-tecnologia.jpg)"></i>Melasma OFF</a><a class="chip" href="#protocolos"><i style="--p:url(img/6030377181.jpg)"></i>Peeling Pele de Porcelana</a><a class="chip" href="#protocolos"><i style="--p:url(img/6030375835.jpg)"></i>Hot Lipo</a><a class="chip" href="#protocolos"><i style="--p:url(img/6030383419.jpg)"></i>Baby Skin PH</a><a class="chip" href="#protocolos"><i style="--p:url(img/pele-radiante.jpg)"></i>Depilação a Laser</a><a class="chip" href="#protocolos"><i style="--p:url(img/6030377181.jpg)"></i>Diástase PH</a><a class="chip" href="#protocolos"><i style="--p:url(img/6030375835.jpg)"></i>Flaci OFF</a><a class="chip" href="#protocolos"><i style="--p:url(img/6030383419.jpg)"></i>Crio da Pri</a><a class="chip" href="#protocolos"><i style="--p:url(img/pele-radiante.jpg)"></i>Estrias</a><a class="chip" href="#protocolos"><i style="--p:url(img/tratamento-facial.jpg)"></i>Celulite OFF</a><a class="chip" href="#protocolos"><i style="--p:url(img/skincare-produtos.jpg)"></i>Limpeza de Pele</a><a class="chip" href="#protocolos"><i style="--p:url(img/sala-tecnologia.jpg)"></i>Melasma OFF</a><a class="chip" href="#protocolos"><i style="--p:url(img/6030377181.jpg)"></i>Peeling Pele de Porcelana</a><a class="chip" href="#protocolos"><i style="--p:url(img/6030375835.jpg)"></i>Hot Lipo</a><a class="chip" href="#protocolos"><i style="--p:url(img/6030383419.jpg)"></i>Baby Skin PH</a><a class="chip" href="#protocolos"><i style="--p:url(img/pele-radiante.jpg)"></i>Depilação a Laser</a></div></div>
  <a class="notch" href="#protocolos"><span class="fl">✿</span>Explorar nossos tratamentos</a></div></header>
 <section class="bleed"><img src="img/6030374391.jpg" alt="Recepção da La Primore"><div class="wrap"><div class="glass r"><span class="eyebrow">Nossa essência</span><h2>Resultados e experiências transformadoras</h2><p>Cada protocolo é pensado para você: técnicas exclusivas, atendimento personalizado e um ambiente criado para que o autocuidado seja, de fato, um momento seu.</p><a class="btn dark" style="margin-top:28px" href="#protocolos">Conheça os protocolos</a></div></div></section>
 
@@ -299,5 +330,11 @@ footer h4{color:var(--ac)}
 const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
 document.querySelectorAll('.r').forEach((el,i)=>{el.style.transitionDelay=(i%3)*90+'ms';io.observe(el)});
 addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('s',scrollY>40));
+
+(function(){const ps=[...document.querySelectorAll('.fan .pill')],N=ps.length,step=16,span=N*step;let off=0,last=performance.now(),paused=false;
+const fan=document.querySelector('.fan');if(!fan)return;fan.addEventListener('mouseenter',()=>paused=true);fan.addEventListener('mouseleave',()=>paused=false);
+const rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+function f(t){if(!paused&&!rm)off+=(t-last)*0.004;last=t;ps.forEach((p,i)=>{const a=(((i*step+off)%span)+span)%span-span/2;p.style.setProperty('--a',a+'deg');p.style.setProperty('--o',Math.max(0,Math.min(1,(span/2-Math.abs(a))/16)))});requestAnimationFrame(f)}
+requestAnimationFrame(f)})();
 </script>
 </body></html>
